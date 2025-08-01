@@ -38,7 +38,7 @@ let config = {
         type: "current",
         location: "New York",
         locationID: "5128581", // Replace with your city ID
-        apiKey: "YOUR_OPENWEATHER_API_KEY"
+        apiKey: "bd5e378503939ddaee76f12ad7a97608"
       }
     },
     {
