@@ -6,8 +6,8 @@ let config = {
   basePath: "/",
   ipWhitelist: [], // Set [] to allow all IPs
   language: "en",
-  timeFormat: 12,
-  units: "imperial",
+  timeFormat: 24,
+  units: "metric",
 
   modules: [
     {
