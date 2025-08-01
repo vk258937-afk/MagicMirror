@@ -17,9 +17,9 @@ let config = {
 		config: {
 			showDate: true,
 			showWeek: false,
-			showSeconds: true,
+			showSeconds: false,
 			dateFormat: "ddd, ll",
-			timezone: "Europe/Prague"
+			timezone: "America/Chicago"
 		}
     },
     {
