@@ -10,18 +10,6 @@ let config = {
   units: "metric",
 
   modules: [
-    {
-
-		module: "MMM-DigClock",
-		position: "bottom_left",	// This can be any of the regions.
-		config: {
-			showDate: true,
-			showWeek: false,
-			showSeconds: false,
-			dateFormat: "ddd, ll",
-			timezone: "America/Chicago"
-		}
-    },
 	{
     module: "WallberryTheme",
     position: "fullscreen_below", // Required Position
