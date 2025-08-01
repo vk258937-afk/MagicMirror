@@ -10,7 +10,7 @@ let config = {
   modules: [
     {
 		module: "MMM-DigClock",
-		position: "top_left",	// This can be any of the regions.
+		position: "bottom_left",	// This can be any of the regions.
 		config: {
 			showDate: true,
 			showWeek: false,
