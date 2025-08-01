@@ -9,14 +9,16 @@ let config = {
 
   modules: [
     {
-      module: "clock",
-      position: "bottom_left",
-      config: {
-        displaySeconds: true,
-        showDate: true,
-        dateFormat: "dddd, MMMM D",
-      }
-    },
+		module: "MMM-DigClock",
+		position: "top_left",	// This can be any of the regions.
+		config: {
+			showDate: true,
+			showWeek: false,
+			showSeconds: false,
+			dateFormat: "ddd, ll",
+			timezone: "America/Chicago"
+		}
+	},
     {
       module: "compliments",
       position: "bottom_center",
