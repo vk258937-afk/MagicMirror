@@ -1,48 +1,88 @@
-/* MagicMirror² Config Sample */
-
 let config = {
   address: "0.0.0.0",
   port: 8080,
   basePath: "/",
   ipWhitelist: [], // Set [] to allow all IPs
   language: "en",
-  timeFormat: 24,
-  units: "metric",
+  timeFormat: 12,
+  units: "imperial",
 
   modules: [
-	{
-    module: "WallberryTheme",
-    position: "fullscreen_below", // Required Position
-    config: {
-      unsplashAccessKey: "Your Unsplash API Key", // REQUIRED
-      collections: "2589108" // optional - leave empty for a random photo
+    {
+      module: "clock",
+      position: "bottom_left",
+      config: {
+        displaySeconds: true,
+        showDate: true,
+        dateFormat: "dddd, MMMM D",
+      }
+    },
+    {
+      module: "compliments",
+      position: "bottom_center",
+      config: {
+        compliments: {
+          anytime: [
+            "What do bees do after they are married? They go on a honeymoon."
+          ]
+        }
+      }
+    },
+    {
+      module: "weather",
+      position: "bottom_right",
+      config: {
+        weatherProvider: "openweathermap",
+        type: "current",
+        location: "New York",
+        locationID: "5128581", // Replace with your city ID
+        apiKey: "YOUR_OPENWEATHER_API_KEY"
+      }
+    },
+    {
+      module: "weather",
+      position: "bottom_right",
+      config: {
+        weatherProvider: "openweathermap",
+        type: "forecast",
+        location: "New York",
+        locationID: "5128581",
+        apiKey: "YOUR_OPENWEATHER_API_KEY"
+      }
+    },
+    {
+      module: "newsfeed",
+      position: "top_left",
+      config: {
+        feeds: [
+          {
+            title: "Tech News",
+            url: "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml"
+          }
+        ],
+        showSourceTitle: true,
+        showPublishDate: true,
+        broadcastNewsFeeds: true,
+        broadcastNewsUpdates: true
+      }
+    },
+    {
+      module: "newsfeed",
+      position: "top_right",
+      config: {
+        feeds: [
+          {
+            title: "Space News",
+            url: "https://www.nasa.gov/rss/dyn/breaking_news.rss"
+          }
+        ],
+        showSourceTitle: true,
+        showPublishDate: true
+      }
     }
-  },
-  // WB-clock adds local time (Optional Module)
-  {
-    module: "WallberryTheme/WB-clock",
-    position: "top_bar", // highly suggest using top_bar position
-    config: {
-      localCityName: "Seattle", // optional
-      otherCities: [
-      	{name: "DC", timezone: "US/Eastern"}, // optional
-      	{name: "Anchorage", timezone: "US/Alaska"} // optional
-      ]
-    }
-  },
-  // WB-weather adds weather (Optional Module)
-  {
-    module: "WallberryTheme/WB-weather",
-    position: "bottom_bar",  // Highly suggested location
-    config: {
-      // See "Configuration options" for more information.
-      apiKey: "Your openweathermap API key", // REQUIRED
-      latitude:   47.603230, // REQUIRED
-      longitude: -122.330276 // REQUIRED
-    }
-  }
   ]
 };
 
 module.exports = config;
+
 
